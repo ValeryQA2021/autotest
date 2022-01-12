@@ -1,11 +1,14 @@
-export let data = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.data = void 0;
+exports.data = {
     "roles": [
         {
             "id": 1,
             "name": "superadmin",
         }
     ],
-   "users": [
+    "users": [
         {
             "id": 1,
             "firstName": "ВАЛЕРА",
@@ -25,34 +28,26 @@ export let data = {
             "addedDate": new Date(2019, 0, 1)
         }
     ],
-       "accounts": [
-          {
-              "id": 1,
-              "login": "VALERAQA",
-              "password": "qwerty123",
-              "userId": 1,
-          },
-          {
-              "id": 2,
-              "login": "VALERAQA2",
-              "password": "qwerty1232",
-              "userId": 2,
-          }
-      ],
-      "courses": [
-          {
-              "id": 1,
-              "title": "front-end"
-          },
-          {
-              "id": 2,
-              "title": "back-end"
-          },
-          {
-              "id": 3,
-              "title": "QA"
-          },
-      ],
+    "accounts": [
+        {
+            "id": 1,
+            "login": "VALERAQA",
+            "password": "qwerty123",
+            "userId": 1,
+        },
+        {
+            "id": 2,
+            "login": "VALERAQA2",
+            "password": "qwerty1232",
+            "userId": 2,
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "title": "front-end"
+        }
+    ],
     /*    "courseSettings": [
            {
                "id": 0,
@@ -120,4 +115,5 @@ export let data = {
                "type": 0
            }
        ]*/
-}
+};
+//# sourceMappingURL=dataset-01.js.map

@@ -11,7 +11,7 @@ describe('roles-crud', () => {
 
     describe('get', () => {
 
-        it('should be get roles', async () => {
+        it('crud_roles_pagination', async () => {
             let res = await api.get('roles?pageSize=1&page=1');
             expect(res.data.items.length).toBe(1);
             expect(res.data.items[0].id).toBe(7);

@@ -11,7 +11,7 @@ describe('users-crud', () => {
 
     describe('get', () => {
 
-        it('paging works', async () => {
+        it('crud-users', async () => {
             let res = await api.get('users?pageSize=1&page=1')
             expect(res.data.items.length).toBe(1);
             expect(res.data.items[0].id).toBe(2);

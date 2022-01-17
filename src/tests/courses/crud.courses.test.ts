@@ -12,6 +12,7 @@ describe('courses-crud', () => {
     describe('get', () => {
 
         it('should be get courses', async () => {
+
             let res = await api.get('courses?pageSize=1&page=1');
             expect(res.data.items.length).toBe(1);
             expect(res.data.items[0].id).toBe(1);

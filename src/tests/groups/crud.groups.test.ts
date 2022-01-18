@@ -2,7 +2,7 @@ import {generate} from "../../data-generation/generator";
 import {data} from "../../data-generation/data-sets/dataset-01";
 import {api} from "../../api/api";
 
-describe('roles-crud', () => {
+describe('users-crud', () => {
 
     beforeAll(async () => {
         await generate(data)
@@ -11,20 +11,22 @@ describe('roles-crud', () => {
 
     describe('get', () => {
 
-        it('crud_groups_pagination', async () => {
+        it('crud_users_pagination', async () => {
+            let res = await api.get('groups?pageSize=1&page=1')
+            expect(res.data.items.length).toBe(1);
+            expect(res.data.items[0].id).toBe(4);
 
-            let res = await api.get('groups?pageSize=1&page=1');
-            console.log(res.data.items)
+            res = await api.get('groups?pageSize=1&page=2')
+            expect(res.data.items.length).toBe(1);
+            expect(res.data.items[0].id).toBe(3);
 
+            res = await api.get('groups?pageSize=1&page=3');
             expect(res.data.items.length).toBe(1);
             expect(res.data.items[0].id).toBe(2);
-            expect(res.data.items[0].title).toBe('second-groups');
 
-            res = await api.get('groups?pageSize=1&page=2');
+            res = await api.get('groups?pageSize=1&page=4');
             expect(res.data.items.length).toBe(1);
             expect(res.data.items[0].id).toBe(1);
-            expect(res.data.items[0].title).toBe('first-groups');
-
         })
 
 

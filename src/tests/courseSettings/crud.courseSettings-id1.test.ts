@@ -5,7 +5,8 @@ import {api, getCreator} from "../../api/api";
 describe('courses-crud', () => {
 
     const get = getCreator({headers: {
-            "COURSE-ID": "1"
+            "COURSE-ID": "1",
+
         }
     })
 
@@ -18,22 +19,14 @@ describe('courses-crud', () => {
 
         it('crud_coursesSettings_pagination', async () => {
 
-            let res = await get('course-settings?pageSize=1&page=1', {headers: {
-                "COURSE-ID": "1"
-                }
-            });
+            let res = await get('course-settings');
             console.log(res.data.items)
-            expect(res.data.items.length).toBe(1);
+            expect(res.data.items.length).toBe(2);
+
             expect(res.data.items[0].id).toBe(1)
 
 
-
-            res = await api.get('course-settings?pageSize=1&page=2', {headers: {
-                    "COURSE-ID": "1"
-                }
-            });
-            expect(res.data.items.length).toBe(1);
-            expect(res.data.items[0].id).toBe(2)
+            expect(res.data.items[1].id).toBe(2)
 
             /*  res = await api.get('course-settings?pageSize=1&page=3');
               expect(res.data.items.length).toBe(1);
@@ -49,6 +42,8 @@ describe('courses-crud', () => {
 
 
     })
+
+
 
     describe('create', () => {
         //await api.post('users', )

@@ -121,7 +121,7 @@ export let data = {
         },
         {
             "id": 2,
-            "courseId": 2,
+            "courseId": 1,
             "startDate": "2022-01-19T00:00:00.00Z",
             "maxStudentsCount": 2,
             "priceBYN": 13000,
@@ -129,7 +129,7 @@ export let data = {
             "studentsEURPercent": 0,
             "studentsBYNPercent": 100
         },
- /*    {
+     {
          "id": 3,
          "courseId": 2,
          "startDate": "2022-01-11T00:00:00.000Z",
@@ -148,7 +148,7 @@ export let data = {
          "priceEUR": 1300,
          "studentsEURPercent": 100,
          "studentsBYNPercent": 0
-     }*/
+     }
 
  ],
  "groups": [
@@ -160,6 +160,18 @@ export let data = {
      },
      {
          "id": 2,
+         "courseId": 1,
+         "title": "second-groups",
+         "courseSettingId": 2,
+     },
+     {
+         "id": 3,
+         "courseId": 2,
+         "title": "first-groups",
+         "courseSettingId": 1,
+     },
+     {
+         "id": 4,
          "courseId": 2,
          "title": "second-groups",
          "courseSettingId": 2,

@@ -209,7 +209,7 @@ export let data = {
          "simpleName": "string",
          "englishLevel": 1,
          "mentorsNote": "string"
-     }]/*,
+     },
      {
          "id": 2,
          "firstName": "Серега_студ",
@@ -243,7 +243,7 @@ export let data = {
          "mentorsNote": "string"
      },
      {
-         "id": 3,
+         "id": 4,
          "firstName": "Даня_студ",
          "lastName": "Шкурко_студ",
          "middleName": "Даниилович_студ",
@@ -275,7 +275,7 @@ export let data = {
          "mentorsNote": "string"
      },
      {
-         "id": 4,
+         "id": 3,
          "firstName": "Кирилл_студ",
          "lastName": "Микулич_студ",
          "middleName": "Баткович_студ",
@@ -342,5 +342,5 @@ export let data = {
          "id": 1,
          "title": "Беларусь"
      }
- ]*/
+ ]
 }

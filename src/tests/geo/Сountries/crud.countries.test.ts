@@ -1,23 +1,19 @@
 import {generate} from "../../../data-generation/generator";
 import {data} from "../../../data-generation/data-sets/dataset-01";
-import {api, getCreator} from "../../../api/api";
+import {api} from "../../../api/api";
 
-describe('users-crud', () => {
+
+describe('courses-crud', () => {
 
     beforeAll(async () => {
         await generate(data)
     })
 
-
     describe('get', () => {
 
-        const get = getCreator({headers: {
-                "COURSE-ID": "1"
-            }
-        })
 
         it('crud_countries', async () => {
-            let res = await get('geo/countries?page=1&pageSize=100');
+            let res = await api.get('geo/countries?page=1&pageSize=100');
             console.log(res.data)
 
             expect(res.data.items.length).toBe(3);

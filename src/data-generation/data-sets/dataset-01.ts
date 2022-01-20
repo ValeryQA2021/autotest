@@ -325,7 +325,12 @@ export let data = {
             "id": 1,
             "title": "KYZIN",
             "cityId": 5
-        }
+        },
+        {
+            "id": 2,
+            "title": "BYZIN",
+            "cityId": 5
+        },
     ],
     "countries": [
         {
